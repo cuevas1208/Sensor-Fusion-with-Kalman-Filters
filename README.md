@@ -16,6 +16,18 @@ data/sample-laser-radar-measurement-data-1.txt
 data/sample-laser-radar-measurement-data-2.txt
 ```
 
+src files
+---
+
+<b> main.cpp </b> - reads in data, calls a function to run the Kalman filter, calls a function to calculate RMSE
+
+<b> FusionEKF.cpp </b>- initializes the filter, calls the predict function, calls the update function
+
+<b> kalman_filter.cpp </b> - defines the predict function, the update function for lidar, and the update function for radar
+
+<b> tools.cpp</b> - function to calculate RMSE and the Jacobian matrix
+
+
 ## Dependencies
 
 * cmake >= 3.5
@@ -38,7 +50,7 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 
 ## Reference: 
 
-* Udacity the Self-Driving Car Engineer Program.
+* Starter code was provided by Udacity, as part of Udacity Self-Driving Car Engineer Program.
 
 * <a href="http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/">How a Kalman filter works, in pictures </a>
 
