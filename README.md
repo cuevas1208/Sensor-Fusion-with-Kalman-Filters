@@ -5,8 +5,10 @@
 Overview
 ---
 This project uses lidar measurements and radar measurements to track an object's position and velocity that travels around the vehicle. 
-Sensor data is processed by an extended Kalman filter in C++.  
 
+Kalman filter techniques taught by Andrei Vatavu (Sensor Fusion Engineer at Mercedes-Benz) are implemented in this project to process sensor data in C++. 
+
+##### For more information about this project visit the [Wiki page](https://github.com/cuevas1208/Sensor-Fusion-with-Kalman-Filters/wiki) 
 
 Data set
 ---
@@ -50,7 +52,8 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 
 ## Reference: 
 
-* Starter code was provided by Udacity, as part of Udacity Self-Driving Car Engineer Program.
+* Starter code was provided by Udacity, as part of the Udacity's Self-Driving Car Program. 
+Tools, techniques and knowledge used in this project were taught by Andrei Vatavu, Sensor Fusion Engineer at Mercedes-Benz 
 
 * <a href="http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/">How a Kalman filter works, in pictures </a>
 
