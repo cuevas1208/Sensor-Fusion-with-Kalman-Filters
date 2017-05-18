@@ -140,7 +140,7 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
         ekf_.UpdateEKF(measurement_pack.raw_measurements_);
       } else {
         // Laser updates
-        cout <<"LADIAR - `Kalman Funtion" << endl << endl;
+        cout <<"LIDAR - `Kalman Funtion" << endl << endl;
         ekf_.Update(measurement_pack.raw_measurements_);
       }
   }
