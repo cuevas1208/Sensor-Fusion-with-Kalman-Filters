@@ -56,9 +56,9 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
 
 /**
  * Calculates Jacobian measure. In order to get a gaussian distribution
- * for Radar we compute the Jacobian transformation for x’ in the
+ * for Radar we compute the Jacobian transformation for xâ€™ in the
  * measurement function.
- * Input: x_state - prediction state x’
+ * Input: x_state - prediction state xâ€™
  * Ouput: Hj - Jacobian matrix
 */
 MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
@@ -123,3 +123,15 @@ MatrixXd Tools::fromCartesianToPolar(const Eigen::VectorXd& x){
 
   return X;
 }
+
+/**
+* A helper method to normalize angle
+*/
+void Tools::normalization(double *y){ 
+  if (fabs(*y) > M_PI)
+  {
+    *y -= round(*y / (2.0d * M_PI)) * (2.0d * M_PI);
+  }
+
+}
+

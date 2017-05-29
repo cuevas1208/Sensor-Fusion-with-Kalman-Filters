@@ -33,9 +33,9 @@ public:
 
   /**
     * A helper method to calculate Jacobians.. In order to get a gaussian distribution
-    * for Radar we compute the Jacobian transformation for x’ in the
+    * for Radar we compute the Jacobian transformation for xâ€™ in the
     * measurement function.
-    * Input: x_state - prediction state x’
+    * Input: x_state - prediction state xâ€™
     * Ouput: Hj - Jacobian matrix
   */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
@@ -44,12 +44,16 @@ public:
   * A helper method to calculate convert from polar to cartesian.
   */
   Eigen::MatrixXd fromPolarToCartesian(const Eigen::VectorXd& x);
-
+ 
   /**
   * A helper method to calculate convert from Cartesian to Polar
   */
   Eigen::MatrixXd fromCartesianToPolar(const Eigen::VectorXd& x);
 
+  /**
+  * A helper method to normalize angle
+  */
+  void normalization(double *z_diff);
 
 };
 
